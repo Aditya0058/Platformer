@@ -171,7 +171,7 @@ sources/0 = SubResource("TileSetAtlasSource_lnu2h")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jh0yq"]
 
-[sub_resource type="Animation" id="Animation_lnu2h"]
+[sub_resource type="Animation" id="Animation_u5sy4"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -183,12 +183,12 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(128, 20)]
+"values": [Vector2(1078, 157)]
 }
 
-[sub_resource type="Animation" id="Animation_lbhrr"]
-resource_name = "move"
-length = 1.5
+[sub_resource type="Animation" id="Animation_gee14"]
+resource_name = "up_down"
+length = 1.8666667
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -197,16 +197,54 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 1.8666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(128, 20), Vector2(64, 20)]
+"values": [Vector2(1078, 157), Vector2(1078, 3)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_iywne"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0tnpc"]
 _data = {
-&"RESET": SubResource("Animation_lnu2h"),
-&"move": SubResource("Animation_lbhrr")
+&"RESET": SubResource("Animation_u5sy4"),
+&"up_down": SubResource("Animation_gee14")
+}
+
+[sub_resource type="Animation" id="Animation_iywne"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(608, 21)]
+}
+
+[sub_resource type="Animation" id="Animation_p57ef"]
+resource_name = "movement"
+length = 1.7
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(608, 21), Vector2(736, 21)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u5sy4"]
+_data = {
+&"RESET": SubResource("Animation_iywne"),
+&"movement": SubResource("Animation_p57ef")
 }
 
 [node name="Game" type="Node2D" unique_id=1706208333]
@@ -266,9 +304,17 @@ position = Vector2(39, 9)
 
 [node name="Platforms" type="Node" parent="." unique_id=958542615]
 
-[node name="Platform" parent="Platforms" unique_id=1721803968 instance=ExtResource("3_lnu2h")]
-position = Vector2(128, 20)
+[node name="Platform-updown" parent="Platforms" unique_id=1721803968 instance=ExtResource("3_lnu2h")]
+position = Vector2(1078, 157)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform" unique_id=1006360212]
-libraries/ = SubResource("AnimationLibrary_iywne")
-autoplay = &"move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform-updown" unique_id=338129161]
+libraries/ = SubResource("AnimationLibrary_0tnpc")
+autoplay = &"up_down"
+
+[node name="Platform2" parent="Platforms" unique_id=193814404 instance=ExtResource("3_lnu2h")]
+position = Vector2(608, 21)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2" unique_id=1905938225]
+root_node = NodePath("../../Platform2")
+libraries/ = SubResource("AnimationLibrary_u5sy4")
+autoplay = &"movement"
