@@ -20,10 +20,20 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("move_left", "move_right")
 
 	#flip the sprite
-	if direction > 0:
-		animated_sprite.flip_h = false
-	if direction < 0:
-		animated_sprite.flip_h = true
+	if is_on_floor():
+		if direction > 0:
+			animated_sprite.flip_h = false
+		if direction < 0:
+			animated_sprite.flip_h = true
+	else:
+		animated_sprite.play("jump")
+	
+		
+	#play animations
+	if direction == 0:
+		animated_sprite.play("idle")
+	else:
+		animated_sprite.play("run")
 		
 	 
 	# move the player
