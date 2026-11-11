@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bo2afn0una8xa" path="res://scripts/coin.gd" id="1_i64fm"]
 [ext_resource type="Texture2D" uid="uid://bpokhfgop7hgs" path="res://assets/sprites/coin.png" id="1_rwqht"]
+[ext_resource type="AudioStream" uid="uid://fql5sisrre7t" path="res://assets/sounds/coin.wav" id="3_11l1o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_50myp"]
 radius = 4.1231055
@@ -108,6 +109,10 @@ shape = SubResource("CircleShape2D_50myp")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1383842796]
 sprite_frames = SubResource("SpriteFrames_50myp")
 autoplay = "default"
-frame_progress = 0.04181866
+frame_progress = 0.22401893
+
+[node name="PickupSound" type="AudioStreamPlayer2D" parent="." unique_id=616833468]
+stream = ExtResource("3_11l1o")
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
