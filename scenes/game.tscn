@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bqpk47h2u8j1a" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://dibf453kb0cwf" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://bd73qj1b8m7nl" path="res://scenes/slime.tscn" id="6_p57ef"]
+[ext_resource type="FontFile" uid="uid://d100j448l7o2t" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="7_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -356,3 +357,16 @@ autoplay = &"movement"
 
 [node name="Slime" parent="." unique_id=1025712304 instance=ExtResource("6_p57ef")]
 position = Vector2(793, 3)
+
+[node name="Label" type="Label" parent="." unique_id=77992210]
+texture_filter = 1
+offset_left = -26.0
+offset_top = 32.0
+offset_right = 150.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0.019607844, 0.13333334, 0.3019608, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 13
+text = "'W' to Jump
+'A' to go Left
+'D' to go Right"

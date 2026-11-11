@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 		
 	#play animations
 	if direction == 0:
-		animated_sprite.play("idle")
+		animated_sprite.play("idle") 
 	else:
 		animated_sprite.play("run")
 		
