@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dibf453kb0cwf" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://bd73qj1b8m7nl" path="res://scenes/slime.tscn" id="6_p57ef"]
 [ext_resource type="FontFile" uid="uid://d100j448l7o2t" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://c5s71pglb157y" path="res://scenes/ice_platform.tscn" id="8_vtaks"]
 [ext_resource type="PackedScene" uid="uid://c37t8qfe7o6fh" path="res://scenes/purple_slime.tscn" id="9_0tnpc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
@@ -789,27 +790,24 @@ root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_vtaks")
 autoplay = &"move_back_and_forth"
 
-[node name="Platform2" parent="Platforms" unique_id=216481341 instance=ExtResource("3_lnu2h")]
+[node name="icePlatform" parent="Platforms" unique_id=1360950322 instance=ExtResource("8_vtaks")]
 position = Vector2(3591, -39)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2" unique_id=1832865816]
-root_node = NodePath("../../Platform2")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/icePlatform" unique_id=1832865816]
 libraries/ = SubResource("AnimationLibrary_dinhu")
 autoplay = &"up_down"
 
-[node name="Platform3" parent="Platforms" unique_id=869971759 instance=ExtResource("3_lnu2h")]
+[node name="icePlatform2" parent="Platforms" unique_id=758814184 instance=ExtResource("8_vtaks")]
 position = Vector2(3700, -188)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform3" unique_id=924930109]
-root_node = NodePath("../../Platform3")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/icePlatform2" unique_id=924930109]
 libraries/ = SubResource("AnimationLibrary_ir15t")
 autoplay = &"slant_down"
 
-[node name="Platform4" parent="Platforms" unique_id=1863732248 instance=ExtResource("3_lnu2h")]
+[node name="icePlatform3" parent="Platforms" unique_id=384681965 instance=ExtResource("8_vtaks")]
 position = Vector2(3837, -126)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform4" unique_id=830931404]
-root_node = NodePath("../../Platform4")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/icePlatform3" unique_id=830931404]
 libraries/ = SubResource("AnimationLibrary_ssvqc")
 autoplay = &"slant_down"
 
