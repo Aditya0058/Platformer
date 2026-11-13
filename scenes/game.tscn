@@ -376,19 +376,6 @@ position = Vector2(793, 3)
 
 [node name="Label3" type="Node" parent="." unique_id=1535760143]
 
-[node name="Label" type="Label" parent="Label3" unique_id=77992210]
-texture_filter = 1
-offset_left = -26.0
-offset_top = 32.0
-offset_right = 150.0
-offset_bottom = 86.0
-theme_override_colors/font_color = Color(0.019607844, 0.13333334, 0.3019608, 1)
-theme_override_fonts/font = ExtResource("7_u5sy4")
-theme_override_font_sizes/font_size = 13
-text = "'W' to Jump
-'A' to go Left
-'D' to go Right"
-
 [node name="Label2" type="Label" parent="Label3" unique_id=365860211]
 offset_left = 914.0
 offset_top = 50.0
