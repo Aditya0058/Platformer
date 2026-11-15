@@ -2,17 +2,23 @@
 
 [ext_resource type="Script" uid="uid://gfi4hx7nvb5k" path="res://scripts/game_manger.gd" id="1_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://pbmoqjvodepq" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="AudioStream" uid="uid://rqjf14o1xo0t" path="res://assets/music/Sheru Bhai Song 👑 Tadban Tadban Sheru Bhai Attitude Rap Song 2026 Gana Sri.mp3" id="2_ir15t"]
+[ext_resource type="AudioStream" uid="uid://buls42bkbq802" path="res://assets/music/From The Start.mp3" id="2_trtic"]
 [ext_resource type="Texture2D" uid="uid://bnnjesaw108b5" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://da3arnja7nvk5" path="res://scenes/platform.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bqpk47h2u8j1a" path="res://scenes/coin.tscn" id="4_lbhrr"]
+[ext_resource type="AudioStream" uid="uid://chplr0qehi3q8" path="res://assets/music/sma$her & MC DA$ILVA - BAILA LENTO 💫 BRAZILIAN FUNK PHONK.mp3" id="4_rysoc"]
+[ext_resource type="AudioStream" uid="uid://5g0y71va0q02" path="res://assets/music/SEM DEMORA (Slowed).mp3" id="5_264po"]
 [ext_resource type="PackedScene" uid="uid://dibf453kb0cwf" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="AudioStream" uid="uid://comjq86nkdxjv" path="res://assets/music/running.mp3" id="5_kvpfn"]
+[ext_resource type="AudioStream" uid="uid://dtvmuhbdis7uw" path="res://assets/music/FUNK TAKA (Slowed).mp3" id="6_1kice"]
 [ext_resource type="AudioStream" uid="uid://deqh28iud0yv5" path="res://assets/music/whoosh-jump-2.mp3" id="6_dinhu"]
 [ext_resource type="PackedScene" uid="uid://bd73qj1b8m7nl" path="res://scenes/slime.tscn" id="6_p57ef"]
 [ext_resource type="FontFile" uid="uid://d100j448l7o2t" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://c5s71pglb157y" path="res://scenes/ice_platform.tscn" id="8_vtaks"]
 [ext_resource type="PackedScene" uid="uid://c37t8qfe7o6fh" path="res://scenes/purple_slime.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://bvr5hwu6gkv88" path="res://scenes/levelenteringsound.tscn" id="13_trtic"]
+[ext_resource type="FontFile" uid="uid://d24vi1uap4rn1" path="res://assets/fonts/PixelOperator8.ttf" id="16_ca42v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -338,18 +344,27 @@ _data = {
 
 [node name="end2" parent="LevelEnteringSound" unique_id=1974212920 instance=ExtResource("13_trtic")]
 position = Vector2(4216, -32)
+music = ExtResource("2_ir15t")
 
 [node name="end1" parent="LevelEnteringSound" unique_id=410205114 instance=ExtResource("13_trtic")]
 position = Vector2(4138, -32)
+music = ExtResource("2_ir15t")
 
 [node name="first" parent="LevelEnteringSound" unique_id=1577389492 instance=ExtResource("13_trtic")]
 position = Vector2(153, 128)
+music = ExtResource("2_trtic")
 
 [node name="second" parent="LevelEnteringSound" unique_id=568176343 instance=ExtResource("13_trtic")]
 position = Vector2(1514, 14)
+music = ExtResource("4_rysoc")
 
 [node name="third" parent="LevelEnteringSound" unique_id=1218893253 instance=ExtResource("13_trtic")]
 position = Vector2(2871, 110)
+music = ExtResource("5_264po")
+
+[node name="4th" parent="LevelEnteringSound" unique_id=680872870 instance=ExtResource("13_trtic")]
+position = Vector2(3642, -208)
+music = ExtResource("6_1kice")
 
 [node name="Game Manager" type="Node" parent="." unique_id=598169842]
 unique_name_in_owner = true
@@ -867,3 +882,12 @@ position = Vector2(580, 100)
 
 [node name="PurpleSlime2" parent="Enemy" unique_id=41717037 instance=ExtResource("9_0tnpc")]
 position = Vector2(3314, 116)
+
+[node name="Label" type="Label" parent="." unique_id=1282035283]
+offset_left = 138.0
+offset_top = 29.0
+offset_right = 269.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("16_ca42v")
+text = "stay in pink box"
+autowrap_mode = 3

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://rqjf14o1xo0t"
+path="res://.godot/imported/Sheru Bhai Song 👑 Tadban Tadban Sheru Bhai Attitude Rap Song 2026 Gana Sri.mp3-64baf1a267d81634699cc418303cc143.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Sheru Bhai Song 👑 Tadban Tadban Sheru Bhai Attitude Rap Song 2026 Gana Sri.mp3"
+dest_files=["res://.godot/imported/Sheru Bhai Song 👑 Tadban Tadban Sheru Bhai Attitude Rap Song 2026 Gana Sri.mp3-64baf1a267d81634699cc418303cc143.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
